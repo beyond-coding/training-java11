@@ -43,7 +43,7 @@ public class ImmutableListTest {
     List<Integer> list = List.of(1);
 
     assertEquals(1, list.size());
-    assertEquals(1, list.get(0));
+    assertEquals(Integer.valueOf(1), list.get(0));
 
     assertThrows(UnsupportedOperationException.class, () -> list.add(2));
     assertThrows(UnsupportedOperationException.class, () -> list.remove(0));

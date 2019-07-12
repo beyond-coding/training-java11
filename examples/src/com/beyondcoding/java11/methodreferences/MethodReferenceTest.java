@@ -20,10 +20,10 @@ public class MethodReferenceTest {
     SecretFormula formula = new SecretFormula();
 
     Function<Integer, Double> applySecretFormula = number -> formula.calculate(number);
-    assertEquals(2.0, applySecretFormula.apply(4));
+    assertEquals(Double.valueOf(2.0), applySecretFormula.apply(4));
     applySecretFormula = formula::calculate;
-    assertEquals(2.0, applySecretFormula.apply(4));
-    
+    assertEquals(Double.valueOf(2.0), applySecretFormula.apply(4));
+
     //applySecretFormula = SecretFormula::calculate; // error: the method is not static
   }
 }
