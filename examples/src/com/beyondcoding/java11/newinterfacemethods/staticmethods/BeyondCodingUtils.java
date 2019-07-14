@@ -7,7 +7,7 @@ public interface BeyondCodingUtils {
   }
 
   static String spam(String text) {
-    String fiveTimesSpam = " Beyond Coding".repeat(3);
-    return text + fiveTimesSpam;
+    String spam = " Beyond Coding".repeat(3);
+    return text + spam;
   }
 }
