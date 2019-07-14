@@ -16,7 +16,7 @@ public class SupplierTest {
   };
 
   @Test
-  void testIsLongerThan5Characters() {
+  void test() {
     String actual = supplier.get();
 
     String expected = "something";

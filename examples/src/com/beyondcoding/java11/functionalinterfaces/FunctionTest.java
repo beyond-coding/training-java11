@@ -22,7 +22,7 @@ public class FunctionTest {
       "Number 1, 1",
       "Number -1, -1",
   })
-  void testIsLongerThan5Characters(String expected, Integer number) {
+  void test(String expected, Integer number) {
     String actual = toFlavouredText.apply(number);
 
     assertEquals(expected, actual);

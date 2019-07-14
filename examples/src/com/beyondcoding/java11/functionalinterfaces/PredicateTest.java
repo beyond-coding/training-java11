@@ -30,7 +30,7 @@ public class PredicateTest {
       "false, 12345",
       "true, 123456"
   })
-  void testIsLongerThan5Characters(boolean expected, String text) {
+  void test(boolean expected, String text) {
     boolean actual = isLongerThan5Characters.test(text);
     
     assertEquals(expected, actual);

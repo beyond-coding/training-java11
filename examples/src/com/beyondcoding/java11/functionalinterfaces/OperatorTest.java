@@ -28,7 +28,7 @@ public class OperatorTest {
       "AB, AB",
       "ABC, aBc"
   })
-  void testIsLongerThan5Characters(String expected, String text) {
+  void test(String expected, String text) {
     String actual = toUpperCase.apply(text);
 
     assertEquals(expected, actual);

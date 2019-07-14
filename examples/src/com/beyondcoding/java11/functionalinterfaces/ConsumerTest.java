@@ -22,7 +22,7 @@ public class ConsumerTest {
 
   @ParameterizedTest
   @ValueSource(ints = {-1000, -1, 0, 1, 1000})
-  void testIsLongerThan5Characters(int expected) {
+  void test(int expected) {
     consumer.accept(expected);
 
     int actual = number.get();
