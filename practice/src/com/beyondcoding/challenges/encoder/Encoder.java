@@ -28,12 +28,12 @@ public interface Encoder {
     return encoded;
   }
 
-  static List<String> getLetters(String plaintext) {
+  private static List<String> getLetters(String plaintext) {
     var letters = plaintext.split("");
     return List.of(letters);
   }
 
-  static Rule getRule(String letter) {
+  private static Rule getRule(String letter) {
     for (var rule : rules) {
       if (rule.isApplicable(letter)) {
         return rule;
