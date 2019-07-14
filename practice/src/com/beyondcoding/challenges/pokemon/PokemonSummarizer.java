@@ -1,7 +1,9 @@
 package com.beyondcoding.challenges.pokemon;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.*;
@@ -35,7 +37,7 @@ public class PokemonSummarizer {
   public String getNonLegendaryPokemonNameWithHighestSpellAttack() {
     return pokemons.stream()
                    .filter(e -> !e.isLegendary())
-                   .sorted(comparing(Pokemon::getSpellAttack).reversed())
+                   .sorted(Comparator.comparing(Pokemon::getSpellAttack).reversed())
                    .map(Pokemon::getName)
                    .findFirst()
                    .orElse("There are no pokemons");
