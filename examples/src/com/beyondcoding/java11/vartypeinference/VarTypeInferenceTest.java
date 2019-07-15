@@ -38,6 +38,17 @@ class VarTypeInferenceTest {
     assertEquals("Java 119true", text);
 
     //text = 7; // causes a compilation error
+    var num = 9;
+    //num. -- no Integer method appears because the primitive type int is chosen
+    
+    var num2 = Integer.valueOf(9);
+    num2.toString(); // Integer is inferred
+    
+    var letter = 'a'; // char is inferred
+    //letter.
+    
+    var letter2 = "a";
+    letter2.isBlank(); // String is inferred
   }
 
   @Test
